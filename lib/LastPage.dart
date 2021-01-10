@@ -129,7 +129,7 @@ class _LastPageState extends State<LastPage> {
                                                       snapshot.data[index].strLeague,
                                                       style: TextStyle(
                                                         color: selectedIndex ==index? Colors.white70: Colors.black45,
-                                                        fontSize: 15,
+                                                        fontSize: 13,
                                                         fontWeight: FontWeight.w500,
                                                       ),
                                                     ),

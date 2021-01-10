@@ -60,7 +60,7 @@ class LastMatch extends StatelessWidget {
         ),
         SizedBox(height: 8.0,),
         Container(
-          height: 500,
+          height: 490,
           alignment: Alignment.center,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.only(

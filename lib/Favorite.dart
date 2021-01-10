@@ -256,20 +256,23 @@ class _FavoritePageState extends State<FavoritePage> {
                                                     showCancelButton: true,
                                                     style: SweetAlertStyle.confirm,
                                                     onPress: (isConfirm) {
-                                                      deleteLastMatch(snapshot.data[index].idEvent).then((value){
-                                                        getMatchList().then((value){
-                                                          setState(() {
-                                                            lastModels = value;
+                                                      if(isConfirm){
+
+                                                        deleteLastMatch(snapshot.data[index].idEvent).then((value){
+                                                          getMatchList().then((value){
+                                                            setState(() {
+                                                              lastModels = value;
+                                                            });
                                                           });
                                                         });
-                                                      });
-                                                      SweetAlert.show(
-                                                          context,
-                                                          title: "Deleted Successfully!",
-                                                          style: SweetAlertStyle.success,
-                                                      );
+                                                        SweetAlert.show(
+                                                            context,
+                                                            title: "Deleted Successfully!",
+                                                            style: SweetAlertStyle.success,
+                                                        );
 
-                                                      return false;
+                                                        return false;
+                                                      }
                                                     },
                                                 );
                                               },
